@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ * Copyright (c) 2002-2011 by XMLVM.org
+ *
+ * Project Info:  http://www.xmlvm.org
+ *
+ * This program is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation; either version 2.1 of the License, or
+ * (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ * or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public
+ * License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301,
+ * USA.
+-->
+
+
+<!--
+The layout resource to be used for the SayHello user interface. A LinearLayout
+aligns the three widgets EditText, TextView, and Button vertically. Each of
+those widgets is given a resource ID via the XML attribute 'id'. The at-symbol (@)
+at the beginning of the string indicates that the XML parser should parse and
+expand the rest of the ID string and identify it as an ID resource. The plus-symbol
+(+) means that this is a new resource name that must be created and added to the
+R-class.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50px"
+        android:layout_margin="20dp"
+        android:text="Now Buy/Sell/Rent Your Books with a click of a Button \n Enter The book Name / ISBN or just scan the bar code to serch for the book" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+   
+        android:layout_below="@id/heading"
+        android:layout_margin="10dp"
+        android:text=" ISBN / Book Name" > 
+    </TextView>
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tag"
+   android:layout_margin="4dp"
+        android:layout_marginTop="25px" >
+    
+    </EditText>
+
+   
+
+    <!--
+         The Button widget also defines a click listener via XML attribute
+	     'onClick'. The method to be invoked is of name 'onClick' as well
+	     and must be declared in the context that created the Button
+	     (i.e., the Activity)
+    -->
+
+    <Button
+        android:id="@+id/scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+       android:layout_below="@id/input"
+       android:layout_margin="20dp"
+        android:background="@drawable/scan" >
+    </Button>
+<Button
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+       android:layout_below="@id/scan"
+       android:layout_margin="20dp"
+        android:background="@drawable/search">    </Button>
+
+    <Button
+        android:id="@+id/help"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/help"
+        android:text="HELP" >
+
+    </Button>
+
+</RelativeLayout>

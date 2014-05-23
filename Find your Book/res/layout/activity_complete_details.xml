@@ -1,0 +1,180 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CompleteDetails" >
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Hell is here"
+            android:textSize="24dp" />
+
+        <RelativeLayout
+            android:id="@+id/BookDetails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/heading"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="20dp" >
+
+            <ImageView
+                android:id="@+id/bookImage"
+                android:layout_width="130dp"
+                android:layout_height="200dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/help" />
+
+            <TextView
+                android:id="@+id/bookName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/bookImage"
+                android:text="Hell is here"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bookPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bookName"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/bookImage"
+                android:text="100$"
+                android:textSize="16dp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/bookEdition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/bookName"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/bookPrice"
+                android:text="V 2.2"
+                android:textSize="16dp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/bookAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bookEdition"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/bookImage"
+                android:text="Hell is here"
+                android:textSize="19dp"
+                android:textStyle="italic|bold" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/seperator"
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:layout_below="@id/BookDetails"
+            android:background="#FFFFFF" />
+
+        <TableLayout
+            android:id="@+id/availability"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seperator"
+            android:orientation="horizontal" >
+
+            <HorizontalScrollView
+                android:layout_width="320px"
+                android:layout_height="fill_parent" >
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/new_book"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="30dp"
+                        android:text="New Availabel" />
+
+                    <TextView
+                        android:id="@+id/new_available"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="Yes" />
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/used_book"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="Used Availabel" />
+
+                    <TextView
+                        android:id="@+id/used_available"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="NO" />
+                </TableRow>
+            </HorizontalScrollView>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/buy"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/availability"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_red"
+            android:padding="5dp"
+            android:text="Buy New"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/sell"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/availability"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/button_yellow"
+            android:padding="5dp"
+            android:text="Sell/Rent "
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/rent"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/availability"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_green_stroke"
+            android:padding="5dp"
+            android:text="Buy Used"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+</ScrollView>

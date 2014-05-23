@@ -1,0 +1,148 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tableLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#191F27"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".VendorsDetails" >
+
+    <RelativeLayout
+        android:id="@+id/heading"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#003D99"
+            android:text="Find Your Books"
+            android:textSize="22dp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:background="#003D99"
+            android:text="New Buyer for your book's"
+            android:textSize="18dp"
+            android:textStyle="italic" />
+    </RelativeLayout>
+
+    <!--
+    <RelativeLayout
+        android:id="@+id/used_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp" >
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" >
+
+            <TableLayout
+                android:id="@+id/vendors_used"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/vendor_used"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="30dp"
+                        android:text="VENDOR NAME" />
+
+                    
+                     <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="30dp"
+                    android:text="price" />
+                   
+
+                    <TextView
+                        android:id="@+id/price_used"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="30dp"
+                        android:text="Discount" />
+
+                    <TextView
+                        android:id="@+id/available_in_days_used"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="30dp"
+                        android:text="Shiiping Days" />
+
+                    <TextView
+                        android:id="@+id/total_used"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Amount" />
+                </TableRow>
+            </TableLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+    -->
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/heading"
+        android:layout_marginTop="54dp" >
+
+        <TableLayout
+            android:id="@+id/vendors"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="10dp" >
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/vendor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="30dp"
+                    android:text="VENDOR NAME" />
+
+                <TextView
+                    android:id="@+id/discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="30dp"
+                    android:text="Contact Details" />
+
+                <!-- <TextView
+                    android:id="@+id/Available"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="30dp"
+                    android:text="Book Name" />
+
+                <TextView
+                    android:id="@+id/Total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="30dp"
+                    android:text="Total Amount" /> -->
+            </TableRow>
+        </TableLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>
